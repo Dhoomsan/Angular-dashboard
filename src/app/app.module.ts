@@ -1,4 +1,3 @@
-
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -8,10 +7,9 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { ScrollEventModule } from 'ngx-scroll-event';
 import { CarouselModule } from 'ngx-bootstrap';
 import { ChartModule } from 'angular2-chartjs';
-//https://github.com/techsithgit/ng5-http-get-post/tree/master/src/app
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms'
 
@@ -30,6 +28,7 @@ import { TabComponent } from './tab/tab.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { AuthGuardService as AuthGuard } from './authentication/authguards/auth-guard.service';
 import { PanelComponent } from './panel/panel.component';
+
 const routes: Routes = [
   {  path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: Home,canActivate: [AuthGuard] },

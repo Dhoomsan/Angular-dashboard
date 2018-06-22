@@ -1,0 +1,64 @@
+<!-- About -->
+<section class="jumbotron">
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <h2 class="section-heading text-uppercase">About</h2>
+      <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <ul class="timeline">
+        <li *ngFor="let aboutdata of abouts"  class="{{ aboutdata.styledata }}">
+            <div class="timeline-image">
+                <a class="portfolio-link" data-toggle="modal" href="#AboutModal{{aboutdata.id }}">
+                  <img class="rounded-circle img-fluid" src="{{ aboutdata.url }}" alt="">
+                </a>
+            </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 style="color: black">{{ aboutdata.title }}</h4>
+              <h4 class="subheading">{{ aboutdata.description }}</h4>
+            </div>
+            <div class="timeline-body">
+              <p class="text-muted">{{ aboutdata.detail }}</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- About Modals -->
+
+    <div class="portfolio-modal modal " *ngFor="let aboutdata of abouts" id="AboutModal{{aboutdata.id }}" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h4 class="text-uppercase">{{ aboutdata.title }}</h4>
+                  <p class="item-intro text-muted text-center">{{ aboutdata.description }}</p>
+                  <p>{{ aboutdata.detail }}</p>
+                </div>
+              </div>
+              <div class="col-sm-6"><img class="img-fluid d-block mx-auto" src="{{ aboutdata.url }}" alt="image"></div>
+            </div>
+            <button class="btn btn-primary" data-dismiss="modal" type="button">
+                <i class="fa fa-times"></i>
+                Close Project
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>

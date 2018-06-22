@@ -1,0 +1,72 @@
+<!-- Header -->
+<header class="masthead" >
+    <div class="container">
+      <div class="intro-text text-center">
+        <div class="intro-lead-in">Welcome To Our Studio!</div>
+        <div class="intro-heading text-uppercase ">It's Nice To Meet You</div>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" routerLink="/tab">Tell Me More</a>
+      </div>
+    </div>
+  </header>
+
+<div class="jumbotron" >
+  <div class="container" *ngIf="products">
+    <h3 class="text-center">
+        {{ title }}!
+    </h3><hr>
+    <div class="row  text-uppercase h5">
+      <div style="width: 10%" class="text-center">ID</div>
+      <div class="tabletd">Name</div>
+      <div class="tabletd">e_mail</div>
+      <div class="tabletd">Number</div>
+    </div>
+    <hr>
+      <!-- BIND ARRAY TO TABLE -->
+    <div class="row" *ngFor="let Bird of products">
+      <div style="width: 10%" class="text-center">{{Bird.id}}</div>
+      <div class="tabletd">{{Bird.name}}</div>
+      <div class="tabletd">{{Bird.email}}</div>
+      <div class="tabletd">{{Bird.password}}</div>
+    </div>
+    <hr>
+  </div>
+</div>
+
+<!-- import panel layout -->
+<app-panel></app-panel>
+
+
+<!--Alert box - Scroll event-->
+
+<ng-template #content let-c="close" let-d="dismiss" detect-scroll (onScroll)="handleScroll($event)" [bottomOffset]="200" [topOffset]="200" [ngStyle]="{'background-color': '#' + bgColor}">
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>{{closeResult}}</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="c('Close click')">Close</button>
+  </div>
+</ng-template>
+<div class="container">
+  <div class="row ">
+    <button class="btn btn-outline-primary  col-sm-6" (click)="openWindowCustomClass(content)">Modal with window custom class</button>
+    <button class="btn btn-outline-primary  col-sm-6" (click)="openBackDropCustomClass(content)">Modal with backdrop custom class</button>
+    <button class="btn btn-outline-primary col-sm-6" (click)="openSm(content)">Small modal</button>
+    <button class="btn btn-outline-primary  col-sm-6" (click)="btnClick();"> Add</button>
+    <button class="btn btn-outline-primary  col-sm-6" (click)="openSm(content)">Small modal</button>
+    <button class="btn btn-outline-primary  col-sm-6" (click)="openLg(content)">Large modal</button>
+    <button class="btn btn-outline-primary  col-sm-6" (click)="openVerticallyCentered(content)">Modal vertically centered</button>
+    <button class="btn btn-outline-primary  col-sm-6" (click)="openSnackbar()">Open Snackbar</button>
+  </div>
+  <br>
+  <div class="row">
+    Enter and punch -: &nbsp;<input  [(ngModel)]="username">
+  </div>
+  <p style="padding-left: 140px">{{username}}</p>
+ 
+</div>

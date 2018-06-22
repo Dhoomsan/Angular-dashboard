@@ -1,0 +1,50 @@
+<!-- Navigation -->
+<div class="man-nav fixed-top" id="headerDiv" >
+    <!-- Header -->
+    <header class="topHead" [ngStyle]="{'display':topHeadPosition}"> 
+        <h1><b>WELCOME</b></h1>
+        <h3>Welcome to the {{title}}</h3>
+    </header>
+    <nav  class="navbar navbar-expand-lg " detect-scroll (onScroll)="navScroll($event)" id="navDiv">
+        <div class="navbar-brand js-scroll-trigger" routerLink="/home"><img src="favicon.ico"/> Angular </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            Menu
+            <i class="fa fa-bars"></i>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav text-uppercase">
+                <li class="nav-item "   *ngFor="let navbar of navbars" [class.selected]="navbar === selectedHero" (click)="onSelect(navbar)">
+                    <a class="nav-link js-scroll-trigger"  data-toggle="tab" id="IdHome" routerLink="{{ navbar.url }}"> {{ navbar.name }}</a>
+                </li>
+            </ul>
+            <div class="form-inline ml-auto justify-content-center changeSocial">
+                <a class="nav-item nav-link" target="_blank"  *ngFor="let social of socials" href="{{ social.url }}" >
+                    <span class="{{ social.socialIcon }}"></span>
+                </a>
+            </div>
+        </div>
+    </nav> 
+    <div class="header">
+        <div class="progress-container">
+          <div class="progress-bar" id="myBar"></div>
+        </div>  
+      </div>   
+</div>
+<!-- Navbar end  Navbar end  Navbar end  Navbar end  Navbar end  Navbar end  Navbar end  Navbar end -->
+
+<!-- go to top -->
+<i  class="btn-position fa fa-arrow-circle-up" (click)="onTop()"  [ngStyle]="{'display':btnDisplay}"></i>
+
+<!-->call page herw-->
+ <div class="center-panel" [ngStyle]="{'padding-top':centerPanelPadding}" >
+    <router-outlet></router-outlet>
+</div>
+
+<!--Footer-->
+<app-footer></app-footer>
+
+
+    
+        
+        

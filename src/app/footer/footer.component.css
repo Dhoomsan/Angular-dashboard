@@ -1,0 +1,10 @@
+  p.footerInfo{
+    text-align: center;
+    color: black;
+    padding: 15px;
+    margin: 0px auto;
+  }
+  footer{
+    border-top: 1px solid rebeccapurple;
+    padding: 1%  0px;
+  }

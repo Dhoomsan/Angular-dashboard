@@ -1,0 +1,101 @@
+.topHead{
+  text-align: center;
+  -webkit-transition-property: width; /* Safari */
+    -webkit-transition-duration: 2s; /* Safari */
+    transition-property: width;
+    transition-duration: 2s;
+}
+.man-nav{
+  width: 100%;
+  background: white;
+  border-bottom:1px solid rebeccapurple;
+}
+nav .navbar-brand{
+  color:rgb(2, 46, 32);
+  font-family:cursive;
+  font-weight:bold;
+  letter-spacing: 5px;
+}
+.selected {
+  background-color:#007bff;
+  border-radius:5%;
+  color: white;
+}
+.nav-link{
+  color: black;
+  font-weight: bold;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.navbar-toggler{
+  background-color:rgb(16, 151, 16);
+  color: aliceblue;
+}
+.navbar a:hover {
+  background-color:rgb(19, 219, 96) ;
+  color: white;
+  border-radius:5%; 
+}
+
+
+.container  {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* .center-panel{
+  padding-top: 60px;
+} */
+.progress-bar{
+  height:4px;
+}
+.progress-bar:hover{
+  background-color: rgb(19, 219, 96);
+}
+
+.btn-position{
+  position:fixed;
+  bottom:2vh;
+  right:1%;
+  font-size:30px;
+  color:#007bff;
+  overflow: hidden;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.btn-position:hover{
+  color:rgb(19, 219, 96);
+}
+
+/* (320x480) Smartphone, Landscape */
+@media screen and (max-width: 900px) {
+  .topHead {
+    display:none !important;
+  }
+  .center-panel{
+    padding-top: 60px !important;
+  }
+  .changeSocial{
+    background-color: antiquewhite;
+  }
+}

@@ -1,0 +1,78 @@
+<section>
+    <h2 class="text-center">Tabs </h2>
+  <div class="container">
+      <hr>
+    <div class="row">
+        <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active show" data-toggle="pill" routerLink="./admin">Area Line Chart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="./login">Simple Line Chart</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-4"></div>
+    </div>
+  </div>
+</section>
+  
+ <!-- tab nava -->
+ <router-outlet></router-outlet>
+
+
+<!-- tab -->
+<section class="container py-4">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Tabs menu</h3>
+            <ul id="tabsJustified" class="nav nav-tabs">
+                <li class="nav-item"><a href="" data-target="#home1" data-toggle="tab" class="nav-link small text-uppercase ">Area </a></li>
+                <li class="nav-item"><a href="" data-target="#profile1" data-toggle="tab" class="nav-link small text-uppercase active ">Profile</a></li>
+                <li class="nav-item"><a href="" data-target="#messages1" data-toggle="tab" class="nav-link small text-uppercase">Messages</a></li>
+            </ul>
+            <br>
+            <div id="tabsJustifiedContent" class="tab-content">
+
+                <div id="home1" class="tab-pane fade ">
+                    <div class="list-group">
+                        <div class="card" id="">
+                            <h4 class="card-title">Area Line Chart</h4>
+                            <div class="ct-area-ln-chart" style="height:15em;" ></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="profile1" class="tab-pane fade active show">
+                    <div class="card">
+                        <h4 class="card-title">Simple Line Chart</h4>
+                        <div class="ct-sm-line-chart" style="height: 400px;"></div>
+                      </div>
+                </div>
+                
+                <div id="messages1" class="tab-pane fade">
+
+                    <div class="list-group">
+                      <a  class="list-group-item d-inline-block">
+                        <span class="float-right badge badge-pill badge-dark">44</span>
+                         Message 1</a> 
+                      <a  class="list-group-item d-inline-block">
+                        <span class="float-right badge badge-pill badge-dark">8</span>
+                         Message 2
+                      </a>                            
+                      <a  class="list-group-item d-inline-block">
+                        <span class="float-right badge badge-pill badge-dark">23</span>
+                         Message 3
+                      </a> 
+                      <a  class="list-group-item d-inline-block text-muted">Message n..</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ 

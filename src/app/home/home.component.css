@@ -1,0 +1,63 @@
+header.masthead {
+    text-align: center;
+    color: white;
+    background-image: url("/assets/header-bg.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: calc(100vh - 155px);
+  }  
+  header.masthead .intro-text {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+  header.masthead .intro-text .intro-lead-in {
+    font-size: 40px;
+    font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  header.masthead .intro-text .intro-heading {
+    font-size: 75px;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+  .tabletd{
+    width: 30%;
+    word-wrap: break-word;
+  }
+  
+    /* (320x480) Smartphone, Landscape */
+@media screen and (max-width: 1000px) {
+      header.masthead {
+      height: 100%;
+    }  
+    header.masthead .intro-text {
+      padding:0px;
+    }
+    header.masthead .intro-text .intro-lead-in {
+      font-size: 20px;
+      font-style: italic;
+      line-height: 40px;
+      margin-bottom: 25px;
+      font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    header.masthead .intro-text .intro-heading {
+      font-size:20px;
+      font-weight: 700;
+      line-height: 50px;
+      margin-bottom: 50px;
+      font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    
+  }
+  @media screen and (max-height: 600px) {
+    header.masthead {
+    height: 100%;
+  }   
+  header.masthead .intro-text {
+    padding: 0px;
+  } 
+}  

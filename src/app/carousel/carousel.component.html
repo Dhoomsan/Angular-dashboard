@@ -1,0 +1,74 @@
+<!--Carousel Wrapper-->
+<div id="carousel-example-2" class="carousel  carousel-fade" data-ride="carousel">
+  <!--Indicators-->
+  <ol class="carousel-indicators" >
+    <li *ngFor="let carousesid of carouses" data-target="#carousel-example-2" data-slide-to class="{{carousesid.actives}}"></li>
+  </ol>
+  <!--/.Indicators-->
+  <!--Slides https://valor-software.com/ngx-bootstrap/#/carousel-->
+  <carousel>
+    <slide *ngFor="let carousesimage of carouses" >
+      <img class="img-fluid" [src]="carousesimage.url" alt="first slide" >
+      <div class="carousel-caption d-none d-md-block">
+        <h3>{{carousesimage.description}}</h3>
+        <p>{{carousesimage.detail}}</p>
+      </div>
+    </slide>
+  </carousel>
+  <!--/.Slides-->
+</div>
+
+<!--/.Carousel Wrapper-->
+<div class="container onhover">
+  <div id="cf" class="row"> 
+    <div class="col-sm-12">
+      <img class="bottom img-fluid" src="/assets/portfolio/01-thumbnail.jpg" />
+      <img class="top img-fluid" src="/assets/portfolio/02-thumbnail.jpg" />
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3" *ngFor="let carousesimage of carouses">
+      <a data-toggle="modal" href="#AboutModal{{carousesimage.id }}">
+        <img class="img-fluid "  [src]="carousesimage.url" alt="">
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- carousel Modals -->
+
+<div class="portfolio-modal modal " *ngFor="let carousesimage of carouses" id="AboutModal{{carousesimage.id }}" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="close-modal" data-dismiss="modal">
+        <div class="lr">
+          <div class="rl"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 mx-auto">
+            <div class="modal-body">
+              <!-- Project Details Go Here -->
+              <h4 class="text-uppercase">{{ carousesimage.title }}</h4>
+              <p class="item-intro text-muted text-center">{{ carousesimage.description }}</p>
+              <p>{{ carousesimage.detail }}</p>
+            </div>
+          </div>
+          <div class="col-sm-6"><img class="img-fluid d-block mx-auto" [src]="carousesimage.url" alt="image"></div>
+        </div>
+        <button class="btn btn-primary" data-dismiss="modal" type="button">
+            <i class="fa fa-times"></i>
+            Close Project
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+section {
+    background-image: url('/assets/services-bg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - 155px);
+  }
+  
+  h2,h4{
+    color: aliceblue;
+  }
+  section h2.section-heading {
+    font-size: 40px;
+    margin-top: 0;
+  }  
+  section h3.section-subheading {
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 75px;
+    text-transform: none;
+    font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+.jumbotron{
+  margin: 0px !important;
+}
+.text-muted{
+  color: aliceblue !important;
+}
+p{
+  color: antiquewhite !important;
+}
+  table, th, td 
+{
+    margin: 10px 0;
+    border: solid 1px #333;
+    padding: 2px 4px;
+    font: 15px Verdana;
+}
+th {
+    font-weight:bold;
+}
+
+.tabletd{
+  width: 33%;
+  word-wrap: break-word;
+}
+/* (320x480) Smartphone, Landscape */
+@media screen and (max-width: 900px) {
+  section {
+    height: 100%;
+    padding: 25px 0;
+  }
+  
+}

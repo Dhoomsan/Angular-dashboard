@@ -7,6 +7,8 @@ import { HttpClient } from '@angular/common/http';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ScrollEvent } from 'ngx-scroll-event';
 import {Homedata} from './homedata';
+
+declare var jQuery:any;
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -16,8 +18,15 @@ import {Homedata} from './homedata';
 
 
 export class Home implements OnInit {
+
+  title = 'JSON to Table Example';
+  
+  // ngAfterViewInit() {
+  //   jQuery('button').click();
+  // }
   public bgColor;
-  public username = 'Hello';
+  public username = '';
+  public audio ;
     
   // //scroll 
   //   @HostListener('scroll', ['$event']) 
@@ -44,12 +53,14 @@ export class Home implements OnInit {
     src: 'https://angular.io/assets/images/logos/angular/logo-nav@2x.png'
   }
 
-  title = 'JSON to Table Example';
 
   products  = []; 
   constructor (private router: Router,private httpClient: HttpClient,private modalService: NgbModal, private data:PanelService) { }
 //http://dummy.restapiexample.com/api/v1/employees
   ngOnInit () {
+    //initialize media 
+   this.audio = new Audio();
+
     this.httpClient.get('http://localhost/androidApi/AllStudentData.php').subscribe((res : any[])=>{
         this.products = res;
         //console.log (res);
@@ -91,9 +102,18 @@ export class Home implements OnInit {
     this.closeResult="Modal vertically centered";
   }
 
-  btnClick= function () {
-    this.router.navigate(['/contact']);
+  OnClick= function () {
+    //this.router.navigate(['/contact']);e
+   
+    this.audio.src = "/assets/FAN.mp3";
+    this.audio.load();
+    this.audio.play();
   }
+
+  OffClick= function () {
+    this.audio.pause();
+  }
+
   openSnackbar(){
     this.data.changeMessage(this.username);
   }

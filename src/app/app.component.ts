@@ -3,6 +3,8 @@ import { Navbar } from './navbar';
 import { Social } from './social';
 import { ScrollEvent } from 'ngx-scroll-event';
 
+
+declare var $ :any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -31,8 +33,10 @@ export class AppComponent implements OnInit {
     this.headerDiv=document.getElementById("headerDiv");
     this.navDiv=document.getElementById("navDiv");
 
+   
     this.getheaderHeight=this.headerDiv.clientHeight;
     this.getNavHeight=this.navDiv.clientHeight;
+    //alert(this.getheaderHeight);
 
     this.centerPanelPadding=this.getheaderHeight.toString()+"px";
 
@@ -47,21 +51,28 @@ export class AppComponent implements OnInit {
     this.scrolled = (this.winScroll / this.height) * 100;
     document.getElementById("myBar").style.width = this.scrolled + "%";
 
-    if(window.pageYOffset<200){
-      this.btnDisplay = 'none';
-      this.topHeadPosition='block';
+    if(window.pageYOffset<this.getheaderHeight){
+      //this.topHeadPosition='block';
       this.centerPanelPadding=this.getheaderHeight.toString()+"px";
+      $('#headerDiv').slideDown(); //
+      $('.topHead').slideDown(); //
+      this.btnDisplay = 'none';
     }
     else{
-      this.btnDisplay = 'block';
-      this.topHeadPosition='none';
+      //this.topHeadPosition='none';
+      
       this.centerPanelPadding=this.getNavHeight.toString()+"px";
+     // setTimeout(() => {
+        $('.topHead').slideUp(); 
+     // }, 5000);
+      this.btnDisplay = 'block';
     }
 
   }
 
   onTop(){
-    document.body.scrollTop = document.documentElement.scrollTop = 0;
+    window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+    //document.body.scrollTop = document.documentElement.scrollTop = 0;
   }
 
 // class format

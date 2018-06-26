@@ -35,6 +35,9 @@ nav .navbar-brand{
   color: white;
   border-radius:5%; 
 }
+.navbar{
+  padding: 0rem 1rem;
+}
 
 
 .container  {
@@ -93,7 +96,7 @@ nav .navbar-brand{
     display:none !important;
   }
   .center-panel{
-    padding-top: 60px !important;
+    padding-top: 40px !important;
   }
   .changeSocial{
     background-color: antiquewhite;

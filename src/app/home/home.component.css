@@ -1,3 +1,4 @@
+
 header.masthead {
     text-align: center;
     color: white;
@@ -9,7 +10,7 @@ header.masthead {
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    height: calc(100vh - 155px);
+    height: calc(100vh - 141px);
   }  
   header.masthead .intro-text {
     padding-top: 200px;
@@ -61,3 +62,260 @@ header.masthead {
     padding: 0px;
   } 
 }  
+
+
+.fa-cloud{
+  position: relative;
+  overflow: hidden;
+  -webkit-animation: movingclouds 25s linear infinite;
+	-moz-animation: movingclouds 25s linear infinite;
+	-o-animation: movingclouds 25s linear infinite;
+}
+@keyframes movingclouds {
+	0% {margin-left: 0%;}
+	100% {margin-right: 100%;}
+}
+
+
+/* animation */
+
+#feature-container{
+  overflow: hidden;
+  background-image: url("/assets/header-bg.jpg");
+}
+.cloud-container-parent{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-height: calc(100vh - 141px);
+}
+.cloud-wrapper{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  cursor: pointer;
+}
+.cloud-container{
+  position: absolute;
+  transform-origin: 50% 5%;
+}
+.hanger-string{
+  position: absolute;
+  width: 5px;
+  background-color:#007bff;
+  filter: drop-shadow(-2px 2px 4px #444);
+}
+.cloud-hanger-img{
+  position: relative;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: drop-shadow(-2px 2px 4px #444);
+}
+.cloud-wrapper>.cloud-tag{
+  position: absolute;
+  width: 80%;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-family: 'Pangolin', cursive;
+}
+
+
+.cloud-container-1{
+  top: 18%;
+  width: 60%;
+  left: 10%;
+  height: 25%;
+  transform-origin: 58% -112%;
+}
+.hanger-string-1{
+  top: -10%;
+  left: 40%;
+  height: 35%;
+  transform-origin: 50% 0%;
+}
+.cloud-container-2{
+  top: 58%;
+  left: 28%;
+  width: 60%;
+  height: 25%;
+  transform-origin: 58% -272%;
+}
+.hanger-string-2{
+  top: -10%;
+  left: 60%;
+  height: 72%;
+  transform-origin: 50% 0%;
+}
+
+
+
+.cloud-container-3{
+  top: 10%;
+  left: 12.5%;
+  width: 75%;
+  height: 25%;
+  transform-origin: 50% -160%;
+}
+.hanger-string-3{
+  top: -30%;
+  left: 50%;
+  height: 50%;
+  transform-origin: 50% 0%;
+}
+
+.cloud-container-4{
+  top: 45%;
+  left: 10%;
+  width: 50%;
+  height: 25%;
+  transform-origin: 50% -60%;
+}
+.hanger-string-4{
+  top: 30%;
+  left: 35%;
+  height: 20%;
+  transform-origin: 50% 0%;
+}
+
+.cloud-container-5{
+  top: 68%;
+  left: 40%;
+  width: 50%;
+  height: 25%;
+  transform-origin: 50% -152%;
+}
+.hanger-string-5{
+  top: 25%;
+  left: 65%;
+  height: 48%;
+  transform-origin: 50% 0%;
+}
+
+
+.cloud-container-6{
+  top: 22%;
+  width: 60%;
+  left: 10%;
+  height: 25%;
+  transform-origin: 58% -248%;
+}
+.hanger-string-6{
+  top: -40%;
+  left: 40%;
+  height: 68%;
+  transform-origin: 50% 0%;
+}
+.cloud-container-7{
+  top: 60%;
+  left: 30%;
+  width: 60%;
+  height: 25%;
+  transform-origin: 58% -320%;
+}
+.hanger-string-7{
+  top: -20%;
+  left: 60%;
+  height: 85%;
+  transform-origin: 50% 0%;
+}
+
+.rot-anim {
+  animation: rot-anim 5s 2s infinite;
+}
+@keyframes rot-anim {
+  0% {transform:  rotate(6deg);}
+  5% {transform: rotate(-9deg);}
+  10% {transform: rotate(9deg);}
+  15% {transform: rotate(-6deg);}
+  50% {transform: rotate(3deg);}
+}
+
+.drop-animation-1 {
+  z-index: 5;
+  animation: drop-animation-1 2s linear both;
+}
+@keyframes drop-animation-1 {
+  0% {transform: translateY(-100%);}
+  25% {transform: translateY(-90%);}
+  50% {transform: translateY(0%);}
+  60% {transform: translateY(10%);}
+  70% {transform: translateY(-8%);}
+  80% {transform: translateY(6%);}
+  80% {transform: translateY(-3%);}
+  100% {transform: translateY(0%);}
+}
+
+.drop-animation-2 {
+  z-index: 3;
+  animation: drop-animation-2 2s linear both;
+}
+@keyframes drop-animation-2 {
+  0% {transform: translateY(-200%);}
+  50% {transform: translateY(0%);}
+  60% {transform: translateY(10%);}
+  70% {transform: translateY(-9%);}
+  80% {transform: translateY(7%);}
+  80% {transform: translateY(-3.5%);}
+  100% {transform: translateY(0%);}
+}
+.drop-animation-3 {
+  z-index: 1;
+  animation: drop-animation-2 2s linear both;
+}
+@keyframes drop-animation-3 {
+  0% {transform: translateY(-300%);}
+  50% {transform: translateY(0%);}
+  60% {transform: translateY(10%);}
+  70% {transform: translateY(-10%);}
+  80% {transform: translateY(8%);}
+  80% {transform: translateY(-4%);}
+  100% {transform: translateY(0%);}
+}
+
+@keyframes drop-animation-0 {
+  0% {transform: translateY(-100%);}
+  60% {transform: translateY(10%);}
+  80% {transform: translateY(-5%);}
+  100% {transform: translateY(0%);}
+}
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  .cloud-container-3{
+    transform-origin: 50% -40%;
+  }
+  .hanger-string-3{
+    transform-origin: 50% 91%;
+  }
+  .drop-animation-1 {
+    animation: drop-animation-0 1s 0s ease-in-out both;
+  }
+  .drop-animation-2 {
+    animation: drop-animation-0 1s 0s ease-in-out both;
+  }
+  .drop-animation-3 {
+    animation: drop-animation-0 1s 0s ease-in-out both;
+  }
+}
+
+.cloud-wrapper:hover{
+  -webkit-animation-duration:1s;
+  animation-duration:1s;
+  -webkit-animation-fill-mode:both;
+  animation-fill-mode:both;
+  -webkit-animation-name:jello;
+  animation-name:jello;
+  -webkit-transform-origin:center;
+  transform-origin:center
+}
+
+/* @import url('https://fonts.googleapis.com/css?family=Pangolin'); */

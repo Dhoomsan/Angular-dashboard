@@ -2,12 +2,8 @@
     background-color: #33cc99;
     color:#fff;
     font-family: 'Open Sans', sans-serif;
-    height: calc(100vh);
+    height: calc(100vh - 141px);
     overflow: hidden;
-    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-    animation-name: example;
-    animation-duration: 4s;
 }
 
 .c{
@@ -87,12 +83,12 @@ hr:after {
     padding: 0 0.2em;
     background: #33cc99;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
     .container-fluid{
         background: #33cc99;
         color:#fff;
         font-family: 'Open Sans', sans-serif;
-        height: calc(100vh - 60px);
+        height: calc(100vh - 40px);
         overflow: hidden;
     }
     .c{

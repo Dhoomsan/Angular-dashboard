@@ -2,7 +2,7 @@
   height: calc(100vh - 155px);
 } */
 .carousel carousel slide .img-fluid{
-  height: calc(100vh - 155px);
+  height: calc(100vh - 141px);
 }
 @media screen and (max-width: 900px) {
   .carousel carousel slide .img-fluid{
